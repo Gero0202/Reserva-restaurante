@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #b3cacf;
+}
+
+h1{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px; 
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+
+#reserva-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 20px;
+    width: 20%;
+    height: 500px;
+    margin-left: 26%;
+    background-color: white;
+}
+
+.general{
+    padding-bottom: 13px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-weight: bold;
+}
+
+#horarios{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+}
+
+#horarios div {
+    
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 17px; 
+}
+
+.boton-radio {
+    margin-right: 10px; 
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    
+    
+    
+}
+
+
+
+.caja{
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #cbcbcb; 
+    border-radius: 5px; 
+    box-sizing: border-box;
+}
+
+.error{
+    padding-top: 6px;
+    color: red;
+}
+
+#reserva-confirmada {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    background-color: white;
+}
+
+#reserva-confirmada p{
+    padding-top: 10px;
+}
+
+
+.enviar {
+    width: 60px; 
+    height: 38px; 
+    border: none; 
+    border-radius: 10px; 
+    background-color: #007bff; 
+    color: white; 
+    font-size: 12px; 
+    font-weight: bold; 
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: background-color 0.3s; 
+    margin-left: 120px;
+}
+
+.enviar:hover {
+    background-color: #0056b3; 
+}
