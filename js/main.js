@@ -19,6 +19,19 @@ const diaValido = dia => diasDisponibles.includes(dia.toLowerCase())
 const calcularCostoTotal = (numeroPersonas, tarifa) => numeroPersonas * tarifa
 
 
+const obtenerTarifa = dia => {
+    const dias = Object.keys(precios)
+    const diaEncontrado = dias.find(diaDisponible => diaDisponible === dia)
+    return precios[diaEncontrado] || 0 
+}
+
+const actualizarTarifaDia = () => {
+    const dia = inputDia.value.toLowerCase()
+    const tarifa = obtenerTarifa(dia)
+    const tarifaContenedor = document.getElementById("tarifa-dia")
+    tarifaContenedor.textContent = `Tarifa por persona: $${tarifa}`
+}
+
 const guardarReservaEnLocalStorage = reserva => {
     let reservas = JSON.parse(localStorage.getItem("reservas")) || []
     reservas.push(reserva)
@@ -45,6 +58,8 @@ const formulario = document.getElementById("reserva-form")
 const inputDia = document.getElementById("dia")
 const errorDia = document.getElementById("error-dia")
 
+inputDia.addEventListener("input", actualizarTarifaDia)
+
 
 formulario.addEventListener("submit", event => {
     event.preventDefault()
@@ -64,6 +79,12 @@ formulario.addEventListener("submit", event => {
         errorDia.textContent = "El dia seleccionado no es valido."
         inputDia.classList.add("input-error")
 
+        
+        return
+    }
+
+    if (!hora) {
+        document.getElementById("mensaje-error").textContent = "Debe seleccionar una hora."
         
         return
     }
