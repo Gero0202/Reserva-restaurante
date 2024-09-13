@@ -121,3 +121,105 @@ h1{
 .enviar:hover {
     background-color: #0056b3; 
 }
+
+#form-edicion{
+    
+    
+    
+    gap: 100px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo-editar-reserva{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#reserva-edit-form{
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 20px;
+    width: 20%;
+    height: 520px;
+    margin-left: 40%;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+#guardar-edicion{
+    margin-bottom: 9px;
+}
+
+.reservas-y-vaciar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#vaciar-reservas{
+    width: 200px; 
+    height: 60px; 
+    border: none; 
+    border-radius: 10px; 
+    background-color: #e4420c; 
+    color: white; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    
+    margin-left: 120px;
+}
+
+#reservas-lista{
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+#reservas-lista button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 25px;
+    text-align: center;
+    border: none;
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    
+
+}
+
+.oculto{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+

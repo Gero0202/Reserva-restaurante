@@ -25,7 +25,7 @@
 
         <div class="general">
             <label for="dia">Dia de reserva:</label>
-            <input type="text" id="dia" class="caja" required>
+            <input type="date" id="dia" class="caja" required>
             <span id="error-dia" class="error"></span>
             <p id="tarifa-dia">Tarifa por persona: $0</p> 
         </div>
@@ -65,8 +65,68 @@
 
     
     <div id="reserva-confirmada"></div>
+
+    
+
   </div>
+
+
+   <h2>Reservas</h2>
+    
+    <div class="reservas-y-vaciar">
+    <div id="reservas-lista"></div>
+    <button id="vaciar-reservas">Vaciar Reservas</button>
+    </div>
    
+        
+    <div id="form-edicion">
+        <h3 class="titulo-editar-reserva">Editar Reserva</h3>
+        <form id="reserva-edit-form">
+            <div class="general">
+                <label for="edit-nombre">Nombre:</label>
+                <input type="text" id="edit-nombre" class="caja" required>
+                <span id="edit-error-nombre" class="error"></span>
+            </div>
+
+            <div class="general">
+                <label for="edit-personas">¿Cuantas personas?:</label>
+                <input type="number" id="edit-personas" class="caja" min="2" max="9" required>
+                <span id="edit-error-personas" class="error"></span>
+            </div>
+
+            <div class="general">
+                <label for="edit-dia">Dia de reserva:</label>
+                <input type="date" id="edit-dia" class="caja" required>
+                <span id="edit-error-dia" class="error"></span>
+                <p id="edit-tarifa-dia" >Tarifa por persona: $0</p>  
+            </div>
+
+            <div class="general">
+                <label>Horario:</label>
+                <div id="edit-horarios">
+                    <div>
+                        <label for="edit-horario-20">20:00 PM</label>
+                        <input type="radio" name="edit-horario" value="20:00" id="edit-horario-20" class="boton-radio">
+                    </div>
+                    <div>
+                        <label for="edit-horario-21">21:00 PM</label>
+                        <input type="radio" name="edit-horario" value="21:00" id="edit-horario-21" class="boton-radio">
+                    </div>
+                    <div>
+                        <label for="edit-horario-22">22:00 PM</label>
+                        <input type="radio" name="edit-horario" value="22:00" id="edit-horario-22" class="boton-radio">
+                    </div>
+                    <div>
+                        <label for="edit-horario-23">23:00 PM</label>
+                        <input type="radio" name="edit-horario" value="23:00" id="edit-horario-23" class="boton-radio">
+                    </div>
+                </div>
+                <span id="edit-error-hora" class="error"></span>
+            </div>
+            <div>
+                <button type="button" id="guardar-edicion" class="enviar">Guardar</button>
+                <button type="button" id="cancelar-edicion" class="enviar">Cancelar</button>
+            </div>  
 
 </body>
 </html>
