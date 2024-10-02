@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Reserva</title>
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/edicion.js"></script>
 </head>
 <body>
     <h1>Formulario de reserva</h1>
@@ -57,6 +58,8 @@
             </div>
         </div>
         <div id="mensaje-error" class="error"></div>
+        <div id="error-guardado-reserva" class="error"></div>
+        <div id="reserva-enviada"></div>
         <div class="general">
             <button type="submit" class="enviar">Enviar</button>
         </div>
@@ -78,8 +81,9 @@
     <button id="vaciar-reservas">Vaciar Reservas</button>
     </div>
    
+   
         
-    <div id="form-edicion">
+    <div id="form-edicion" class="oculto">
         <h3 class="titulo-editar-reserva">Editar Reserva</h3>
         <form id="reserva-edit-form">
             <div class="general">
@@ -127,6 +131,14 @@
                 <button type="button" id="guardar-edicion" class="enviar">Guardar</button>
                 <button type="button" id="cancelar-edicion" class="enviar">Cancelar</button>
             </div>  
+            <span id="error-edit-reserva" class="error"></span>
+    </div> 
+    
+    
+    <h3 class="titulo-comentarios">Comentarios</h3>
+    <div id="caja-comentarios"></div>   
 
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
